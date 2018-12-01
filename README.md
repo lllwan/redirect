@@ -18,7 +18,7 @@ Duration: 24                        # token有效期， 默认24小时
 ### 二、认证
 + 使用用户名密码获取token，使用token做管理操作。
 
-### 二、基本功能
+### 三、基本功能
 
 + 隐性转发
     + 支持自定义百度统计或者51la统计。
@@ -26,4 +26,26 @@ Duration: 24                        # token有效期， 默认24小时
     
 + 301 重定向
     + 支持直接重定向和全站重定向
+    
+### 四、 使用
+
++ 运行本系统，直接监听80端口或者配置nginx的proxy_pass。
++ 使用api或者直接修改数据库的acl表:
+
+|参数|类型|是否必须|描述|
+|---|---|---|---|
+|domain|string|是|域名|
+|url|string|是|转发的目标地址|
+|method|string|是|hide：隐性转发，301：重定向，301all: 全站重定向|
+|title|string|否|页面的title（只有在隐性转发的情况下有效）|
+|keywords|string|否|关键字（只有在隐性转发的情况下有效）|
+|description|string|否|描述（只有在隐性转发的情况下有效）|
+|favicon|string|否|站点图标的url只有在隐性转发的情况下有效）|
+|count|string|否|统计功能值只支持：baidu或者51la（只有在隐性转发的情况下有效）|
+|countid|string|否|统计方案的ID（只有在隐性转发的情况下有效）|
+|username|string|否|暂时可忽略，为多用户准备。|
+
+### 五、操作实例
++ 暂缺
+
     

@@ -1,0 +1,4 @@
+HTTP_BIND: ":8899"                    # 监听端口
+DATABASE: "redirect.db"             # sqlite数据库文件名称
+SECRET: "6RyC2VpehJERy78Q"    # token加密秘钥。
+Duration: 24  # token有效期， 默认24小时

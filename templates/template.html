@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>{{ .title }}</title>
+    <meta name="description" content="{{ .description }}">
+    <meta name="keywords" content="{{ .keywords }}">
+    <link rel="icon" href="{{ .favicon }}">
+</head>
+{{ if eq .count "baidu" }}
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?{{ .countid }}";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+{{ end }}
+{{ if eq .count "51la" }}
+    <script type="text/javascript" src="//js.users.51.la/{{ .countid }}.js"></script>
+{{ end }}
+<frameset framespacing="0" border="0" rows="0" frameborder="0">
+    <frame name="main" src="{{ .url }}{{ .path }}" scrolling="auto" noresize>
+</frameset>
+</html>

@@ -5,7 +5,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"time"
 	"log"
-	"./model"
+	"github.com/lllwan/redirect/model"
 	"fmt"
 )
 
